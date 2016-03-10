@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-        $(function(){
-          
-        });
-    </script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      $('#banner').hide();
+      $('#generate').click(function() {
+        var name = $('#nameInput').val();
+        $('#Name').html(name);
+        var Phrase = $('#phraseInput').val();
+        $('#Phrase').html('"' + Phrase + '"');
+        var Color = $('#ColorInput').val();
+        $('#banner').css('background-color', Color);
+        $('#banner').fadeIn(2000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  Name:
+  <input id="nameInput">
+  <br> Phrase:
+  <input id="phraseInput">
+  <br> Color:
+  <input id="ColorInput">
+
+  <button id="generate">Generate!</button>
+  <div id="banner">
+    <h1 id="Name">Name here</h1>
+    <h2 id="Phrase">Phrase here</h2>
+  </div>
+</body>
+<style>
+  #banner {
+    text-align: center;
+    height: 500px;
+    margin: auto;
+    width: 70%;
+  }
   
-  </body>
+  #Name,
+  #Phrase {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+</style>
+
 </html>
