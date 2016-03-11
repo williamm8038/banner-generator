@@ -7,15 +7,15 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
-      $('#banner').hide();
-      $('#generate').click(function() {
-        var name = $('#nameInput').val();
-        $('#Name').html(name);
-        var Phrase = $('#phraseInput').val();
-        $('#Phrase').html('"' + Phrase + '"');
-        var Color = $('#ColorInput').val();
-        $('#banner').css('background-color', Color);
-        $('#banner').fadeIn(2000);
+      $('#banner').hide(); //Hides banner when page loads
+      $('#generate').click(function() { //Runs function when generate button is clicked
+        var name = $('#nameInput').val(); //sets variable "name" to user input for name box
+        $('#Name').html(name); //changes invisible banner header to users input
+        var Phrase = $('#phraseInput').val();//Sets variable "phrase" to the users input
+        $('#Phrase').html('"' + Phrase + '"');//changes h2 in invisible banner to the users input with quotes around it
+        var Color = $('#ColorInput').val();//sets variable color to the users input for color box
+        $('#banner').css('background-color', Color);// sets background for banner to the color the user put in
+        $('#banner').fadeIn(2000);//makes banner appear after everything has been set
       });
     });
   </script>
